@@ -1,0 +1,22 @@
+# Levanta el like-bot y lo conecta al Brave del host por CDP.
+#
+# Pre-requisito en el host (tu maquina):
+#   1) Cierra Brave y abrilo asi:
+#        brave-browser --remote-debugging-port=9222
+#   2) Abre en esa ventana el directo de TikTok donde quieres dar likes.
+#
+# Uso:
+#   docker compose run --rm like-bot --puerto 9222 -i 1.0
+#   docker compose run --rm like-bot --puerto 9222 -i 0.5 -n 200
+#
+# (docker compose up usaria el comando por defecto de abajo).
+
+services:
+  like-bot:
+    build: .
+    container_name: tiktok-like-bot
+    network_mode: host          # asi "localhost:9222" del contenedor = Brave del host
+    stdin_open: true
+    tty: true
+    # Comando por defecto; sobreescribelo con: docker compose run --rm like-bot <args>
+    command: ["--puerto", "9222", "--intervalo", "1.0"]

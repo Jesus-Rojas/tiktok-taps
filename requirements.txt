@@ -1,0 +1,6 @@
+# auto_clicker.py  (clicks por coordenadas, generico)
+pyautogui>=0.9.54
+pynput>=1.7.6
+
+# like_bot.py  (clicks por selector en Brave con Playwright)
+playwright>=1.40.0

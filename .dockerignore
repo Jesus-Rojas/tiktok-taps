@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+perfil_brave/
+.git/
+.venv/
+README.md
+requirements.txt
+auto_clicker.py
