@@ -80,6 +80,9 @@ docker run --rm --network host tiktok-like-bot --puerto 9222 -i 1.0
 # 200 likes cada 0.5s
 docker run --rm --network host tiktok-like-bot --puerto 9222 -i 0.5 -n 200
 
+# 10000 likes cada 0.01s
+docker run --rm --network host tiktok-like-bot --puerto 9222 -i 0.01 -n 10000
+
 # Con compose (usa el comando por defecto: --puerto 9222 --intervalo 1.0)
 docker compose up
 
